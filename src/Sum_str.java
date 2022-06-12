@@ -27,7 +27,10 @@ public class Sum_str {
                     return ("\"" + sa.substring(0, k) + sa.substring(k + lsb, lsa) + "\"");
                 else return ("\"" + sa + "\"");
             }
+        default:
+            System.out.println("input error");
+            break;
     }
-    return ("input error");
+    return (" ");
 }}
 

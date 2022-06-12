@@ -28,10 +28,11 @@ public class Mult_str {
                         i += 1;
                     }
                     int lam = amul.length();
-                    if (lam < 40) {
-                        return ("\"" + amul + "\"");
-                    } else {
-                        return ("\"" + amul.substring(0, 39) + "..." + "\"");
+                        if (lam < 40) {
+                            return ("\"" + amul + "\"");
+                        }
+                        else {
+                            return ("\"" + amul.substring(0, 39) + "..." + "\"");
                     }
 
                 case "/":
@@ -40,7 +41,7 @@ public class Mult_str {
                     return ("\"" + sa.substring(0, k2) + "\"");
             }
         }
-        return ("something is wrong");
+        return ("Input error");
     }
 }
 
