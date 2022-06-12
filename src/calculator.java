@@ -31,26 +31,16 @@ public class calculator {
             System.out.println(Mult_str.mult_str(sa, sb));
             }
 
-
             else if (sr == 4) {
                 String sb = strings[3];
-              //    System.out.println(strings[1]);
-                // System.out.println(strings[2]);
-                //System.out.println(strings[3]);
                 String ms = strings[2];
-              //  String sb4= strings[3];
                 System.out.println(Sum_str.sum_str(sa, ms, sb));
-
             }
-
-        }else {
-            throw new IOException("wrong format input");
-
         }
-
-
-                                }
-
-                }
+        else {
+            throw new IOException("wrong format input");
+        }
+       }
+     }
 
 

@@ -22,14 +22,12 @@ public class Sum_str {
                 }
             }
             else {
-                //     String sbn = sb.substring(1, lsb - 1);
                 int k = sa.indexOf(sb);
                 if (k != -1)
                     return ("\"" + sa.substring(0, k) + sa.substring(k + lsb, lsa) + "\"");
                 else return ("\"" + sa + "\"");
             }
-
     }
-    return ("something is wrong");
+    return ("input error");
 }}
 
