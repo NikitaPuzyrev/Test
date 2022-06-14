@@ -43,7 +43,7 @@ public class calculator {
         } else {
             System.out.println("\"" + res.substring(0, 39) + "..." + "\"");
         }
-        return ("");
+        return "";
     }
 }
 
