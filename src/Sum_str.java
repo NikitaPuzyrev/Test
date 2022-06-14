@@ -1,36 +1,29 @@
 public class Sum_str {
-    public static String sum_str(String sa, String ms, String sb){
+    public static String sum_str(String sa, String ms, String sb) {
 
-    int lsb = sb.length();
-      int lsa = sa.length();
-                switch (ms) {
-        case " + ":
-
-          return ("\"" + sa + sb + "\"");
-        case " - ":
-            if (lsa < lsb) {
-                return (sa);
-
-            }
-            else if (lsa == lsb) {
-                if (sa.equals(sb)) {
-                   return ("strings are the same result = 0");
-
+        int lsb = sb.length();
+        int lsa = sa.length();
+        String su = "";
+        switch (ms) {
+            case " + ":
+                su = sa + sb;
+                break;
+            case " - ":
+                if (lsa < lsb) {
+                    su = sa;
+                    break;
+                } else if (sa.equals(sb)) {
+                    su = "strings are the same result null";
+                    break;
                 }
-                else {
-                    return (" are ");
-                }
-            }
-            else {
                 int k = sa.indexOf(sb);
-                if (k != -1)
-                    return ("\"" + sa.substring(0, k) + sa.substring(k + lsb, lsa) + "\"");
-                else return ("\"" + sa + "\"");
-            }
-        default:
-            System.out.println("input error");
-            break;
+                if (k != -1) {
+                    su = sa.substring(0, k) + sa.substring(k + lsb, lsa);
+                } else
+                    su = sa;
+        }
+        return (su);
     }
-    return (" ");
-}}
+
+}
 
