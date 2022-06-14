@@ -34,7 +34,7 @@ public class Mult_str {
                     break;
             }
         }
-        return amul;
+        return amul ;
     }
 }
 
