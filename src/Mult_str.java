@@ -33,8 +33,10 @@ public class Mult_str {
                     amul = sa.substring(0, k2);
                     break;
             }
+        } else {
+            throw new IOException("wrong format input m36");
         }
-        return amul ;
+        return amul;
     }
 }
 

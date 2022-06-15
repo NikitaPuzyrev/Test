@@ -1,8 +1,13 @@
+import java.io.IOException;
+
 public class Sum_str {
-    public static String sum_str(String sa, String ms, String sb) {
+    public static String sum_str(String sa, String ms, String sb) throws IOException  {
 
         int lsb = sb.length();
         int lsa = sa.length();
+        if (lsa >10 || lsb > 10){
+            throw new IOException("wrong format input mult9");
+        }else {
         String su = "";
         switch (ms) {
             case " + ":
@@ -22,8 +27,8 @@ public class Sum_str {
                 } else
                     su = sa;
         }
-        return su ;
-    }
+        return su;
+    }}
 
 }
 
