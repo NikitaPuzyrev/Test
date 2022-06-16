@@ -5,6 +5,9 @@ import java.util.List;
 public class Mult_str {
     public static String mult_str(String sa, String sb) throws IOException {
         String[] stringsb = sb.split(" ");
+        if (stringsb.length != 3) {
+            throw new IOException("wrong format input M 9");
+        }
         String sbn = stringsb[2];
         String amul = "";
         int lsa = sa.length();
@@ -26,15 +29,16 @@ public class Mult_str {
                         i += 1;
                     }
                     break;
-
                 case "/":
                     int k1 = sa.length();
                     int k2 = k1 / Integer.valueOf(sbn);
                     amul = sa.substring(0, k2);
                     break;
+                default:
+                    System.exit(38);
             }
         } else {
-            throw new IOException("wrong format input m36");
+            throw new IOException("wrong format input m40");
         }
         return amul;
     }
