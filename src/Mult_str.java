@@ -3,25 +3,16 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Mult_str {
-    public static String mult_str(String sa, String sb) throws IOException {
-        String[] stringsb = sb.split(" ");
-        if (stringsb.length != 3) {
-            throw new IOException("wrong format input M 9");
-        }
-        String sbn = stringsb[2];
+    public static String mult_str(String sa, String ms, String sb) throws IOException {
+
         String amul = "";
-        int lsa = sa.length();
-        String ms = stringsb[1];
-        if (lsa > 10) {
-            throw new IOException("wrong format input");
-        }
 
         List<String> numbers = Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
-        if (numbers.contains(sbn)) {
+        if (numbers.contains(sb)) {
 
             switch (ms) {
-                case "*":
-                    int b = Integer.valueOf(sbn);
+                case " * ":
+                    int b = Integer.valueOf(sb);
 
                     int i = 0;
                     while (i < b) {
@@ -29,9 +20,9 @@ public class Mult_str {
                         i += 1;
                     }
                     break;
-                case "/":
+                case " / ":
                     int k1 = sa.length();
-                    int k2 = k1 / Integer.valueOf(sbn);
+                    int k2 = k1 / Integer.valueOf(sb);
                     amul = sa.substring(0, k2);
                     break;
                 default:
